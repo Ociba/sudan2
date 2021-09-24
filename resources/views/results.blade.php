@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="">
-  <!-- BEGIN: Head-->
+<!-- BEGIN: Head-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-   @include('layouts.title')
+@include('layouts.title')
     <link rel="apple-touch-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
@@ -19,14 +19,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
     <!-- END: Custom CSS-->
 
-  </head>
-  <!-- END: Head-->
+</head>
+<!-- END: Head-->
 
-  <!-- BEGIN: Body-->
-  <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
 
     <!-- BEGIN: Header-->
-   @include('layouts.navbar')
+@include('layouts.navbar')
     <!-- END: Header-->
 
 
@@ -36,7 +36,7 @@
 
     <!-- BEGIN: Content-->
     <div class="app-content content">
-      <div class="content-wrapper">
+    <div class="content-wrapper">
         <div class="content-wrapper-before"></div>
         <div class="content-header row">
         </div>
@@ -47,10 +47,15 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
+                    <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="file" name="file" class="form-control">
+                        <br>
+                        <button class="btn btn-success">Import Results</button>
+                    </form><br>
                     <h4 class="card-titl">File export
-                       <a href="/add-results" button class="btn btn-primary pull-right text-white">Add Marks</button></a>
+                    <a href="/add-results" button class="btn btn-primary pull-right text-white">Add Marks</button></a>
                     </h4>
-                    
                 </div>
                 <div class="card-content collapse show">
                     <div class="card-body card-dashboard">
@@ -532,9 +537,9 @@
         </div>
     </div>
 </section>
-      <!--/ Revenue, Hit Rate & Deals -->
+    <!--/ Revenue, Hit Rate & Deals -->
         </div>
-      </div>
+    </div>
     </div>
     <!-- END: Content-->
 
@@ -547,8 +552,8 @@
     @include('layouts.footer')
     <!-- END: Footer-->    
     <!-- END: Page JS-->
-     @include('layouts.javascript')
-     <script src="{{ asset('admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}" type="text/javascript"></script>
+    @include('layouts.javascript')
+    <script src="{{ asset('admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/buttons.flash.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/jszip.min.js')}}" type="text/javascript"></script>
@@ -556,6 +561,6 @@
     <script src="{{ asset('admin/app-assets/vendors/js/tables/vfs_fonts.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/buttons.html5.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/buttons.print.min.js')}}" type="text/javascript"></script>
-     <script src="{{ asset('admin/app-assets/js/scripts/tables/datatables/datatable-advanced.min.js')}}" type="text/javascript"></script>
-  </body>
+    <script src="{{ asset('admin/app-assets/js/scripts/tables/datatables/datatable-advanced.min.js')}}" type="text/javascript"></script>
+</body>
 </html>

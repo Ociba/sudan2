@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ResultsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,6 @@ Route::get('/register-user',[UserController::Class, 'createUser']);
 Route::get('/suspend-user/{id}',[UserController::Class, 'suspendUser']);
 Route::get('/activate-user/{id}',[UserController::Class, 'activateUser']);
 Route::get('/delete-user',[UserController::Class, 'deleteUser']);
+Route::post('/import',[ResultsController::Class, 'import'])->name('import');
+Route::get('/get-results',[ResultsController::Class, 'getUploadedResults']);
 
