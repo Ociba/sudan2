@@ -23,7 +23,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 Route::get('/logout',[AuthenticationController::Class, 'logoutUser']);
-Route::get('/results-table', function(){ return view('results');});
+//Route::get('/results-table', function(){ return view('results');});
 Route::get('/add-results', function() { return view('add-results');});
 Route::get('/registered-users',[UserController::Class, 'getUsers'])->name('Members'); 
 Route::get('/register-user',[UserController::Class, 'createUser']);

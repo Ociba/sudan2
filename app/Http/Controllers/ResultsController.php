@@ -32,6 +32,7 @@ class ResultsController extends Controller
      */
     protected function getUploadedResults(){
         $results = Result::get();
-        return $results;
+        //return $results;
+        return view('results', compact('results'));
     }
 }
