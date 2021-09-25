@@ -12,7 +12,7 @@
           <li class="nav-item menu-item"><a href="/dashboard"><i class="icon-home"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
             
           </li>
-          <li class="nav-item"><a href="/results-table"><i class="icon-grid"></i><span class="menu-title" data-i18n="">Results</span></a>
+          <li class="nav-item"><a href="/get-results"><i class="icon-grid"></i><span class="menu-title" data-i18n="">Results</span></a>
             {{--<ul class="menu-content">
               <li><a class="menu-item" href="email-application.html">Email Application</a>
               </li>
@@ -38,8 +38,9 @@
               </li>
             </ul>--}}
           </li>
-            <li class=" nav-item"><a href="#"><i class="icon-list"></i><span class="menu-title" data-i18n="">Forms</span></a>
+            {{--<li class=" nav-item"><a href="#"><i class="icon-list"></i><span class="menu-title" data-i18n="">Forms</span></a>
             </li>
+            --}}
             <li class=" nav-item"><a href="/registered-users"><i class="icon-user"></i><span class="menu-title" data-i18n="">Register Users</span></a>
             </li>
         </ul>
