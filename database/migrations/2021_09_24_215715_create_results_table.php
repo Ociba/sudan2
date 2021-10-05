@@ -15,10 +15,10 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->string('group_name')->nullable();
-            $table->string('sub_group_name')->nullable();
-            $table->string('serial_number')->nullable();
-            $table->string('secrete_code')->nullable();
+            // $table->string('group_name')->nullable();
+            // $table->string('sub_group_name')->nullable();
+            // $table->string('serial_number')->nullable();
+            // $table->string('secrete_code')->nullable();
             $table->string('index_number')->nullable();
             $table->string('first_name')->nullable();
             $table->string('second_name')->nullable();
@@ -49,6 +49,9 @@ class CreateResultsTable extends Migration
             $table->string('center_number')->nullable();
             $table->string('school_name')->nullable();
             $table->string('state')->nullable();
+            $table->string('result')->nullable();
+            $table->string('jubek')->nullable();
+            $table->string('number_of_subjects')->nullable();
             $table->timestamps();
         });
     }
