@@ -9,7 +9,9 @@
       <div class="navigation-background"></div>
       <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-          <li class="nav-item menu-item"><a href="/dashboard"><i class="icon-home"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+          <li  @if(\Request::route()->getName() == "dashboard")class="nav-item menu-item active" @else class="nav-item menu-item" @endif>
+            <a href="/dashboard"><i class="icon-home"></i><span class="menu-title" data-i18n="">Dashboard</span>
+          </a>
             
           </li>
           <li class="nav-item"><a href="/get-results"><i class="icon-grid"></i><span class="menu-title" data-i18n="">Results</span></a>
@@ -41,7 +43,9 @@
             {{--<li class=" nav-item"><a href="#"><i class="icon-list"></i><span class="menu-title" data-i18n="">Forms</span></a>
             </li>
             --}}
-            <li class=" nav-item"><a href="/registered-users"><i class="icon-user"></i><span class="menu-title" data-i18n="">Register Users</span></a>
+            <li  @if(\Request::route()->getName() == "Members")class="nav-item active" @else class="nav-item" @endif>
+              <a href="/registered-users"><i class="icon-user"></i><span class="menu-title" data-i18n="">Register Users</span>
+            </a>
             </li>
         </ul>
       </div>
