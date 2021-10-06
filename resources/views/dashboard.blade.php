@@ -83,8 +83,8 @@
                                     <span class="info">50000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> S.4 Total Number of Candidates:
-                                    <span class="blue-grey">{{ number_format($total_number_of_candidates)}}</span>
+                                <h6 class="text-bold-600 mt-1"> Total Number Of Schools:
+                                    <span class="blue-grey">{{ number_format(auth()->user()->countNumberOfSchools())}}</span>
                                 </h6>
                             </div>
                         </div>
@@ -120,8 +120,8 @@
                                     <span class="info">50000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> S.4 Total Number of Candidates:
-                                    <span class="blue-grey">{{ number_format($total_number_of_candidates)}}</span>
+                                <h6 class="text-bold-600 mt-1">Total Number Of Students:
+                                    <span class="blue-grey">{{ number_format(auth()->user()->countNumberOfStudents())}}</span>
                                 </h6>
                             </div>
                         </div>
@@ -157,8 +157,8 @@
                                     <span class="warning media-body text-right">67000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> Senior Four Candidates:
-                                    <span class="blue-grey media-body text-right">{{number_format($get_number_of_boys)}}</span>
+                                <h6 class="text-bold-600 mt-1"> Total Number Of Boys:
+                                    <span class="blue-grey media-body text-right">{{number_format(auth()->user()->countNumberOfBoys())}}</span>
                                 </h6>
                             </div>
                         </div>
@@ -194,8 +194,8 @@
                                     <span class="success media-body text-right">24000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> Senior Four Candidates:
-                                    <span class="blue-grey media-body text-right">{{ number_format($get_number_of_girls)}}</span>
+                                <h6 class="text-bold-600 mt-1"> Total Number Of Girls:
+                                    <span class="blue-grey media-body text-right">{{ number_format(auth()->user()->countNumberOfGirls())}}</span>
                                 </h6>
                             </div>
                         </div>
@@ -206,13 +206,8 @@
         <div class="col-xl-4 col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Best Performed Student</h4>
+                    <h4 class="card-title">Best Performed Student(s)</h4>
                     <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-primary box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="card-content collapse show">
@@ -231,8 +226,10 @@
                                     <span class="success media-body text-right">24000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> Senior Four Candidates:
-                                    <span class="blue-grey media-body text-right">{{ number_format($get_number_of_girls)}}</span>
+                                <h6 class="text-bold-600 mt-1">
+                                    @foreach (auth()->user()->getBestPerformer() as $names)
+                                        <span class="blue-grey media-body text-right">{{ $names->first_name }} {{$names->second_name}} {{ $names->third_name}} {{ $names->fourth_name}} (marks: {{auth()->user()->getBestPerformerTotal()}})</span><br>
+                                    @endforeach
                                 </h6>
                             </div>
                         </div>
@@ -243,7 +240,7 @@
         <div class="col-xl-4 col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Worst Performed Student</h4>
+                    <h4 class="card-title">Worst Performed Student(s)</h4>
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
                             <li>
@@ -268,8 +265,10 @@
                                     <span class="success media-body text-right">24000</span>
                                 </h6>
                                 --}}
-                                <h6 class="text-bold-600 mt-1"> Senior Four Candidates:
-                                    <span class="blue-grey media-body text-right">{{ number_format($get_number_of_girls)}}</span>
+                                <h6 class="text-bold-600 mt-1">
+                                    @foreach (auth()->user()->getWorstPerformer() as $names)
+                                        <span class="blue-grey media-body text-right">{{ $names->first_name }} {{$names->second_name}} {{ $names->third_name}} {{ $names->fourth_name}} (marks: {{auth()->user()->getWorstPerformerTotal()}})</span><br>
+                                    @endforeach
                                 </h6>
                             </div>
                         </div>
@@ -291,7 +290,7 @@
                             </div>
                             <div class="media-body text-white text-right align-self-bottom mt-3">
                                 <span class="d-block mb-1 font-medium-1">Best Performed School</span>
-                                <h1 class="text-white mb-0">687,142</h1>
+                                <h1 class="text-white mb-0">{{'687,142'}}</h1>
                             </div>
                         </div>
                     </div>
