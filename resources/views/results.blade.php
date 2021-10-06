@@ -97,6 +97,7 @@
                                         <th>Center Number</th>
                                         <th>School Name</th>
                                         <th>State</th>
+                                        <th>Option</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -136,6 +137,10 @@
                                         <td>{{$result->center_number}}</td>
                                         <td>{{$result->school_name}}</td>
                                         <td>{{$result->state}}</td>
+                                        <td>
+                                            {{--<button type="button" class="btn btn-sm btn-info " data-toggle="modal" data-backdrop="false" data-target="#info_{{$result->id}}">Add Results</button>--}}
+                                            <a href="/add-results/{{$result->id}}" button type="button" class="btn btn-sm btn-info ">Add Results</button></a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                    
@@ -173,5 +178,92 @@
     <script src="{{ asset('admin/app-assets/vendors/js/tables/buttons.html5.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/vendors/js/tables/buttons.print.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('admin/app-assets/js/scripts/tables/datatables/datatable-advanced.min.js')}}" type="text/javascript"></script>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 my-1">
+        <div class="form-group">
+            <!-- Modal -->
+            @foreach($results as $result)
+            <div class="modal fade text-left" id="info_{{$result->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel11" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-info white">
+                    <h4 class="modal-title white" id="myModalLabel11">Enter Candidate Marks</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="col-md-6 label-control" for="projectinput6">Select Subject:</label>
+		                        	<div class="col-md-12">
+			                            <select id="addCompanyAccount" name="interested" class="form-control border-primary">
+			                                <option value="Englishlang" >English Language</option>
+			                                <option value="design">Christain Religious Education</option>
+			                                <option value="development">Islamic Religiuos Education</option>
+			                                <option value="illustration">Mathematics</option>
+			                                <option value="branding">Physics</option>
+			                                <option value="video">Chemistry</option>
+                                            <option value="company_agency">Biology</option>
+                                            <option value="video">Agriculture</option>
+                                            <option value="video">Additional Mathematics</option>
+                                            <option value="video">Computer Science</option>
+                                            <option value="video">Arabic Language</option>
+                                            <option value="video">French Language</option>
+                                            <option value="video">Fine Arts</option>
+                                            <option value="video">Geography</option>
+                                            <option value="video">History</option>
+                                            <option value="video">Commerce</option>
+                                            <option value="video">General Science</option>
+                                            <option value="video">Principles of Accounts</option>
+                                            <option value="video">English Literature</option>
+			                            </select>
+		                            </div>
+                            </div>
+                            <div id="dvaccount" style="display: none">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <label for="inputFirstname">Enter Subject Marks</label>
+                                        <input type="text" name="agent_name" class="form-control border-primary" id="txtPassportNumber1" placeholder="">
+                                    </div>
+                                </div>
+                                
+                                <input type="text" value="{{$result->id}}" >
+                                
+                            </div>
+                            <div id="Englishlang" style="display: none">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <label for="inputFirstname">Enter Subject Marks</label>
+                                        <input type="text" name="biology" class="form-control border-primary" id="txtPassportNumber1" placeholder="">
+                                    </div>
+                                </div>
+                                @foreach($results as $result)
+                                <input type="text" value="{{$result->id}}" >
+                                @endforeach
+                            </div>
+                            <div class="col-lg-12 mb-3 ">
+                        <button type="button" class="btn grey btn-secondary mr-1" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Save</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function () {
+        $("#addCompanyAccount").change(function () {
+            if ($(this).val() == "company_agency") {
+                $("#dvaccount").show();
+            } else {
+                $("#dvaccount").hide();
+            }
+        });
+    });
+</script>
 </body>
 </html>
