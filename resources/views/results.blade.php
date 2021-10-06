@@ -63,10 +63,10 @@
                             <table class="table table-striped table-bordered file-export">
                                 <thead>
                                     <tr>
-                                        <th>Group</th>
+                                        {{-- <th>Group</th>
                                         <th>Sub Group</th>
                                         <th>S/No.</th>
-                                        <th>Secrete Code</th>
+                                        <th>Secrete Code</th> --}}
                                         <th>Index Number</th>
                                         <th>First Name</th>
                                         <th>Second Name</th>
@@ -103,10 +103,10 @@
                                 <tbody>
                                     @foreach($results as $i=>$result)
                                     <tr>
-                                        <td>{{$result->group_name}}</td>
+                                        {{-- <td>{{$result->group_name}}</td>
                                         <td>{{$result->sub_group_name}}</td>
                                         <td>{{$result->serial_number}}</td>
-                                        <td>{{$result->secrete_code}}</td>
+                                        <td>{{$result->secrete_code}}</td> --}}
                                         <td>{{$result->index_number}}</td>
                                         <td>{{$result->first_name}}</td>
                                         <td>{{$result->second_name}}</td>
