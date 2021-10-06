@@ -39,6 +39,8 @@ class CreateResultsTable extends Migration
             $table->string('arabic_language')->nullable();
             $table->string('french_language')->nullable();
             $table->string('fine_arts')->nullable();
+            $table->string('total')->nullable();
+            $table->string('percentage')->nullable();
             $table->string('geography')->nullable();
             $table->string('history')->nullable();
             $table->string('commerce')->nullable();
@@ -50,7 +52,6 @@ class CreateResultsTable extends Migration
             $table->string('school_name')->nullable();
             $table->string('state')->nullable();
             $table->string('result')->nullable();
-            $table->string('jubek')->nullable();
             $table->string('number_of_subjects')->nullable();
             $table->timestamps();
         });

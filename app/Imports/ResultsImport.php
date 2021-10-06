@@ -45,11 +45,13 @@ class ResultsImport implements ToModel
             'arabic_language'     => $row[23],
             'french_language'     => $row[24],
             'fine_arts'           => $row[25],
-            'result'              => $row[26],
-            'number_of_subjects'  => $row[27],
-            'school_name'         => $row[28],
-            'center_number'       => $row[29],
-            'jubek'               => $row[30]                           
+            'total'               => $row[26],
+            'percentage'          => $row[27],
+            'result'              => $row[28],
+            'number_of_subjects'  => $row[29],
+            'center_number'       => $row[30],
+            'school_name'         => $row[31],
+            'state'               => $row[32]                           
         ]);
     }
 }
