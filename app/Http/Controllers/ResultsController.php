@@ -32,7 +32,42 @@ class ResultsController extends Controller
      */
     protected function getUploadedResults(){
         $results = Result::get();
-        //return $results;
         return view('results', compact('results'));
+    }
+    /** 
+     * This function adds result to particular student
+    */
+    protected function addResults($student_id){
+        $add_results = Result::where('id',$student_id)->get();
+        //$add_results->makeHidden(['english_languge', 'CRE']);
+        return view('add-results', compact('add_results'));
+    }
+    /** 
+     * This function create results for the particular student
+    */
+    protected function createResults($student_id){
+        Result::where('id',$student_id)->update(array(
+            'english_languge'            =>request()->english_languge,
+            'CRE'                        =>request()->CRE,
+            'IRE'                        =>request()->IRE,
+            'mathematics'                =>request()->mathematics,
+            'physics'                    =>request()->physics,
+            'chemistry'                  =>request()->chemistry,
+            'biology'                    =>request()->biology,
+            'agriculture'                =>request()->agriculture,
+            'additional_mtc'             =>request()->additional_mtc,
+            'computer_science'           =>request()->computer_science,
+            'arabic_language'            =>request()->arabic_language,
+            'french_language'            =>request()->french_language,
+            'fine_arts'                  =>request()->fine_arts,
+            'geography'                  =>request()->geography,
+            'history'                    =>request()->history,
+            'commerce'                   =>request()->commerce,
+            'general_science'            =>request()->general_science,
+            'principles_of_accounts'     =>request()->principles_of_accounts,
+            'english_literatue'          =>request()->english_literatue,
+
+        ));
+        return redirect()->back()->with('msg','You have successfully Entered Marks');
     }
 }
