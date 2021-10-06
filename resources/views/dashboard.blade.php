@@ -54,222 +54,86 @@
       <div class="content-wrapper">
         <div class="content-wrapper-before"></div>
         <div class="content-body">
-        <div class="row">
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Total No. of Schools</h4>
-
-                    <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-secondary box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>4/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-secondary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+<!--/ Revenue, Hit Rate & Deals -->
+<div class="row">
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-white">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Schools:
-                                    <span class="info">50000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1"> Total Number Of Schools:
-                                    <span class="blue-grey">{{ number_format(auth()->user()->countNumberOfSchools())}}</span>
-                                </h6>
+                            <div class="media-body text-black text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
+                                <h1 class="text-black text-center mb-0">687,142</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Total No. of Students</h4>
-
-                    <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-info box-shadow-3 round btn-min-width pull-right" style="width:20px;" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>4/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-orange-yellow">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Schools:
-                                    <span class="info">50000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1">Total Number Of Students:
-                                    <span class="blue-grey">{{ number_format(auth()->user()->countNumberOfStudents())}}</span>
-                                </h6>
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Students</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Number of Boys</h4>
-                    <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-warning box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>10/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-blue-green">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Candiates:
-                                    <span class="warning media-body text-right">67000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1"> Total Number Of Boys:
-                                    <span class="blue-grey media-body text-right">{{number_format(auth()->user()->countNumberOfBoys())}}</span>
-                                </h6>
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Number of Girls</h4>
-                    <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-success box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>10/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-red">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Candidates:
-                                    <span class="success media-body text-right">24000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1"> Total Number Of Girls:
-                                    <span class="blue-grey media-body text-right">{{ number_format(auth()->user()->countNumberOfGirls())}}</span>
-                                </h6>
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Girls</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Best Performed Student(s)</h4>
-                    <div class="heading-elements">
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>10/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-blue">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Candidates:
-                                    <span class="success media-body text-right">24000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1">
-                                    @foreach (auth()->user()->getBestPerformer() as $names)
-                                        <span class="blue-grey media-body text-right">{{ $names->first_name }} {{$names->second_name}} {{ $names->third_name}} {{ $names->fourth_name}} (marks: {{auth()->user()->getBestPerformerTotal()}})</span><br>
-                                    @endforeach
-                                </h6>
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Best Performed Student</span>
+                                <h1 class="text-white text-center mb-0">687,142</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Worst Performed Student(s)</h4>
-                    <div class="heading-elements">
-                        <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-danger box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body pt-0 pb-1">
-                        {{--<h6 class="text-bold-600"> Task Completed:
-                            <span>10/10</span>
-                        </h6>
-                        --}}
-                        <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                            <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-orange-yellow">
+                <div class="card-content">
+                    <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-center">
-                                {{--<h6 class="text-bold-600 mt-2"> Primary Eight Candidates:
-                                    <span class="success media-body text-right">24000</span>
-                                </h6>
-                                --}}
-                                <h6 class="text-bold-600 mt-1">
-                                    @foreach (auth()->user()->getWorstPerformer() as $names)
-                                        <span class="blue-grey media-body text-right">{{ $names->first_name }} {{$names->second_name}} {{ $names->third_name}} {{ $names->fourth_name}} (marks: {{auth()->user()->getWorstPerformerTotal()}})</span><br>
-                                    @endforeach
-                                </h6>
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Worst Performed Student</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
                             </div>
                         </div>
                     </div>
@@ -277,37 +141,58 @@
             </div>
         </div>
     </div>
-<!--/ Revenue, Hit Rate & Deals -->
 <!-- Emails Products & Avg Deals -->
 <div class="row">
-        <div class="col-xl-6 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12">
             <div class="card bg-gradient-x-purple-blue">
                 <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-top">
-                                <i class="icon-grid icon-opacity text-white font-large-4 float-left"></i>
-                            </div>
-                            <div class="media-body text-white text-right align-self-bottom mt-3">
+                            <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Best Performed School</span>
-                                <h1 class="text-white mb-0">{{'687,142'}}</h1>
+                                <h1 class="text-white text-center mb-0">687,142</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-12">
             <div class="card bg-gradient-x-orange-yellow">
                 <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
-                            <div class="align-self-top">
-                                <i class="icon-home icon-opacity text-white font-large-4 float-left"></i>
-                            </div>
-                            <div class="media-body text-white text-right align-self-bottom mt-3">
+                            <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Worst Performed School</span>
-                                <h1 class="text-white mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card bg-gradient-x-blue-green">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Best Performed State</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-red">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Worst Performed State</span>
+                                <h1 class="text-white text-center mb-0">$18,123</h1>
                             </div>
                         </div>
                     </div>
