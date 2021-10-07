@@ -15,36 +15,26 @@
             
           </li>
           <li class="nav-item"><a href="/get-results"><i class="icon-grid"></i><span class="menu-title" data-i18n="">Results</span></a>
-            {{--<ul class="menu-content">
-              <li><a class="menu-item" href="email-application.html">Email Application</a>
-              </li>
-              <li><a class="menu-item" href="chat-application.html">Chat Application</a>
-              </li>
-              <li><a class="menu-item" href="full-calender.html">Full Calendar</a>
-              </li>
-              <li><a class="menu-item" href="project-summary.html">Project Summary</a>
-              </li>
-              <li><a class="menu-item" href="invoice-template.html">Invoice</a>
-              </li>
-              <li><a class="menu-item" href="#">Timelines</a>
-                <ul class="menu-content">
-                  <li><a class="menu-item" href="timeline-center.html">Timelines Center</a>
-                  </li>
-                  <li><a class="menu-item" href="timeline-horizontal.html">Timelines Horizontal</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a class="menu-item" href="user-profile.html">Users Profile</a>
-              </li>
-              <li><a class="menu-item" href="users-contacts.html">Contact List</a>
-              </li>
-            </ul>--}}
           </li>
-            {{--<li class=" nav-item"><a href="#"><i class="icon-list"></i><span class="menu-title" data-i18n="">Forms</span></a>
+            {{--<li  @if(\Request::route()->getName() == "Members")class="nav-item active" @else class="nav-item" @endif>
+              <a href="/registered-users"><i class="icon-user"></i><span class="menu-title" data-i18n="">Register Users</span>
+            </a>
             </li>
             --}}
-            <li  @if(\Request::route()->getName() == "Members")class="nav-item active" @else class="nav-item" @endif>
-              <a href="/registered-users"><i class="icon-user"></i><span class="menu-title" data-i18n="">Register Users</span>
+            <li class="nav-item">
+              <a href="/get-students-performance"><i class="icon-book-open"></i><span class="menu-title">Performance</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href="/get-schools-performance"><i class="icon-graduation"></i><span class="menu-title">Schools</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href="/get-gender-performance"><i class="icon-users"></i><span class="menu-title">Gender</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href="/get-states-performance"><i class="icon-globe"></i><span class="menu-title">States</span>
             </a>
             </li>
         </ul>

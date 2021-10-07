@@ -35,5 +35,9 @@ Route::get('/delete-user',[UserController::Class, 'deleteUser']);
 Route::post('/import',[ResultsController::Class, 'import'])->name('import');
 Route::get('/get-results',[ResultsController::Class, 'getUploadedResults']);
 Route::get('/enter-results/{id}',[ResultsController::Class, 'createResults']);
+Route::get('/get-schools-performance',[ResultsController::Class, 'getSchoolPerformance'])->name('Schools Performance');
+Route::get('/get-students-performance',[ResultsController::Class, 'getStudentsPerformance'])->name('Students Performance');
+Route::get('/get-gender-performance',[ResultsController::Class, 'getGenderPerformance'])->name('Girls and Boys Performance');
+Route::get('/get-states-performance',[ResultsController::Class, 'getStatesPerformance'])->name('States Performance');
 });
 

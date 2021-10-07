@@ -70,4 +70,32 @@ class ResultsController extends Controller
         ));
         return redirect()->back()->with('msg','You have successfully Entered Marks');
     }
+    /** 
+     * This function gets general school performance
+    */
+    protected function getSchoolPerformance(){
+        $results = Result::get();
+        return view('school_performance', compact('results'));
+    }
+     /** 
+     * This function gets general students performance
+    */
+    protected function getStudentsPerformance(){
+        $results = Result::get();
+        return view('students_performance', compact('results'));
+    }
+     /** 
+     * This function gets general Gender performance
+    */
+    protected function getGenderPerformance(){
+        $results = Result::get();
+        return view('gender_performance', compact('results'));
+    }
+     /** 
+     * This function gets general States performance
+    */
+    protected function getStatesPerformance(){
+        $results = Result::get();
+        return view('states_performance', compact('results'));
+    }
 }
