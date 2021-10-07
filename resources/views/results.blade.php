@@ -128,9 +128,9 @@
                                         <td>{{$result->general_science}}</td>
                                         <td>{{$result->principles_of_accounts}}</td>
                                         <td>{{$result->english_literatue}}</td>
-                                        <td>{{$result->total}}
-                                        <td>{{$results->percentage}}
-                                        <td>{{$result->result}}
+                                        <td>{{$result->total}}</td>
+                                        <td>{{$result->percentage}}</td>
+                                        <td>{{$result->result}}</td>
                                         <td>{{$result->no_of_subjects}}</td>
                                         <td>{{$result->center_number}}</td>
                                         <td>{{$result->school_name}}</td>

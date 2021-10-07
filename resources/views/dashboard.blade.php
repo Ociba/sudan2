@@ -118,8 +118,10 @@
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
-                                <span class="d-block mb-1 font-medium-1">Best Performed Student</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->getBestPerformer()}}</h1>
+                                <span class="d-block mb-1 font-medium-1">Best Performed Student(s)</span>
+                                @foreach (auth()->user()->getBestPerformer() as $best_performer)
+                                <h4 class="text-white text-center mb-0">{{ $best_performer->first_name}} {{ $best_performer->second_name}} {{ $best_performer->third_name}} {{ $best_performer->fourth_name}}</h4><br>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -132,8 +134,10 @@
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
-                                <span class="d-block mb-1 font-medium-1">Worst Performed Student</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->getWorstPerformer()}}</h1>
+                                <span class="d-block mb-1 font-medium-1">Worst Performed Student(s)</span>
+                                @foreach (auth()->user()->getWorstPerformer() as $best_performer)
+                                <h4 class="text-white text-center mb-0">{{ $best_performer->first_name}} {{ $best_performer->second_name}} {{ $best_performer->third_name}} {{ $best_performer->fourth_name}}</h4><br>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -150,7 +154,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Best Performed School</span>
-                                <h1 class="text-white text-center mb-0">687,142</h1>
+                                <h1 class="text-white text-center mb-0">{{auth()->user()->calculateTheBestPerformingSchool()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -164,7 +168,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Worst Performed School</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{auth()->user()->calculateTheWorstPerformingSchool()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -178,7 +182,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Best Performed State</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{auth()->user()->calculateTheBestPerformingState()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -192,7 +196,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Worst Performed State</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{auth()->user()->calculateTheWorstPerformingState()}}</h1>
                             </div>
                         </div>
                     </div>

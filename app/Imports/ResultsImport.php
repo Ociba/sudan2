@@ -1,6 +1,7 @@
 <?php
-
 namespace App\Imports;
+
+ini_set('max_execution_time', 300);
 
 use App\Models\Result;
 use Maatwebsite\Excel\Concerns\ToModel;
@@ -14,6 +15,28 @@ class ResultsImport implements ToModel
     */
     public function model(array $row)
     {
+        if(Result::where('index_number',$row[0])->exists()){
+            return null;
+        }
+        if(empty($row[32])){
+            return null;
+        }
+        if(empty($row[27])){
+            return null;
+        }
+        if(empty($row[26])){
+            return null;
+        }
+        if(empty($row[28])){
+            return null;
+        }
+        if(empty($row[29])){
+            return null;
+        }if(empty($row[30])){
+            return null;
+        }if(empty($row[31])){
+            return null;
+        }
         return new Result([
             // 'group_name'        => $row[0],
             // 'sub_group_name'    => $row[1], 
@@ -51,7 +74,7 @@ class ResultsImport implements ToModel
             'number_of_subjects'  => $row[29],
             'center_number'       => $row[30],
             'school_name'         => $row[31],
-            'state'               => $row[32]                           
+            'state'               => strtoupper($row[32])                           
         ]);
     }
 }
