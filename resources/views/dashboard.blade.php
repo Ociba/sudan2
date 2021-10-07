@@ -57,13 +57,13 @@
 <!--/ Revenue, Hit Rate & Deals -->
 <div class="row">
         <div class="col-xl-4 col-lg-6 col-12">
-            <div class="card bg-gradient-x-purple-white">
+            <div class="card bg-gradient-x-purple-blue">
                 <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
-                            <div class="media-body text-black text-center align-self-top mt-0">
+                            <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
-                                <h1 class="text-black text-center mb-0">{{ auth()->user()->countNumberOfSchools()}}</h1>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfSchools()}}</h1>
                             </div>
                         </div>
                     </div>
