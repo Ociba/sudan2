@@ -63,7 +63,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-black text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
-                                <h1 class="text-black text-center mb-0">687,142</h1>
+                                <h1 class="text-black text-center mb-0">{{ auth()->user()->countNumberOfSchools()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -77,21 +77,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Students</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-12">
-            <div class="card bg-gradient-x-blue-green">
-                <div class="card-content">
-                    <div class="card-body">
-                        <div class="media d-flex">
-                            <div class="media-body text-white text-center align-self-top mt-0">
-                                <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfStudents()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -104,8 +90,22 @@
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfBoys()}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-blue-green">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Girls</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfGirls()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Best Performed Student</span>
-                                <h1 class="text-white text-center mb-0">687,142</h1>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->getBestPerformer()}}</h1>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Worst Performed Student</span>
-                                <h1 class="text-white text-center mb-0">$18,123</h1>
+                                <h1 class="text-white text-center mb-0">{{ auth()->user()->getWorstPerformer()}}</h1>
                             </div>
                         </div>
                     </div>
