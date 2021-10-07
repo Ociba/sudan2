@@ -158,7 +158,8 @@ class User extends Authenticatable
      */
     public function calculateTheBestPerformingSchool(){
         //marks array
-        $marks_array = [];
+        $total_array = [];
+        $school_name_array = [];
         //get all the schools uniquely
         $all_schools = collect(DB::table('results')->get());
         $unique_schools = $all_schools->unique('school_name');
@@ -166,12 +167,122 @@ class User extends Authenticatable
         foreach($unique_schools as $school){
             //get the sum of the results
             $sum = DB::table('results')->where('school_name',$school->school_name)->sum('total');
-            array_push($marks_array, $sum);
-        }
+            if(in_array($school->school_name, $school_name_array)){
+                continue;
+            }else{
+                array_push($total_array, $sum);
+                array_push($school_name_array, $school->school_name);
+            }
 
-        //get the max number in the array
-        $max_mark = max($marks_array);
-        //get the school having this sum
-        return DB::table('results')->where(sum('total'), $max_mark)->value('school_name');
+        }
+        //get the maximum marks
+        if(empty($total_array)){
+            return 0;
+        }else{
+            $maximum_total = max($total_array);
+            //array position
+            $array_position = array_search($maximum_total, $total_array);
+            //get the school in this postion
+            return $school_name_array[$array_position];
+        }
+    }
+
+    //this function calculates the worst performing school
+    public function calculateTheWorstPerformingSchool(){
+        //marks array
+        $total_array = [];
+        $school_name_array = [];
+        //get all the schools uniquely
+        $all_schools = collect(DB::table('results')->get());
+        $unique_schools = $all_schools->unique('school_name');
+        //get school with max total
+        foreach($unique_schools as $school){
+            //get the sum of the results
+            $sum = DB::table('results')->where('school_name',$school->school_name)->sum('total');
+            if(in_array($school->school_name, $school_name_array)){
+                continue;
+            }else{
+                array_push($total_array, $sum);
+                array_push($school_name_array, $school->school_name);
+            }
+
+        }
+        //get the maximum marks
+        if(empty($total_array)){
+            return 0;
+        }else{
+            $minimum_total = min($total_array);
+            //array position
+            $array_position = array_search($minimum_total, $total_array);
+            //get the school in this postion
+            return $school_name_array[$array_position];
+        }
+    }
+
+    /**
+     * this function calculates the best performed state
+     */
+    public function calculateTheBestPerformingState(){
+        //marks array
+        $total_array = [];
+        $state_name_array = [];
+        //get all the schools uniquely
+        $all_states = collect(DB::table('results')->get());
+        $unique_states = $all_states->unique('state');
+        //get school with max total
+        foreach($unique_states as $state){
+            //get the sum of the results
+            $sum = DB::table('results')->where('state',$state->state)->sum('total');
+            if(in_array($state->state, $state_name_array)){
+                continue;
+            }else{
+                array_push($total_array, $sum);
+                array_push($state_name_array, $state->state);
+            }
+        }
+        //get the maximum marks
+        if(empty($total_array)){
+            return 0;
+        }else{
+            $maximum_total = max($total_array);
+            //array position
+            $array_position = array_search($maximum_total, $total_array);
+            //get the school in this postion
+            return $state_name_array[$array_position];
+        }
+    }
+
+    /**
+     * this function calculates the worst performed state
+     */
+    public function calculateTheWorstPerformingState(){
+        //marks array
+        $total_array = [];
+        $state_name_array = [];
+        //get all the schools uniquely
+        $all_states = collect(DB::table('results')->get());
+        $unique_states = $all_states->unique('state');
+        //get school with max total
+        foreach($unique_states as $state){
+            //get the sum of the results
+            $sum = DB::table('results')->where('state',$state->state)->sum('total');
+            if(in_array($state->state, $state_name_array)){
+                continue;
+            }else{
+                array_push($total_array, $sum);
+                array_push($state_name_array, $state->state);
+            }
+        }
+        //get the minimum marks
+        if(empty($total_array)){
+            return 0;
+        }else{
+            $minimum_total = min($total_array);
+            //array position
+            $array_position = array_search($minimum_total, $total_array);
+            //get the school in this postion
+            // return $array_position;
+            return $state_name_array[2];
+        }
     }
 }
