@@ -62,8 +62,7 @@
 
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-secondary box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
+                    
                             </li>
                         </ul>
                     </div>
@@ -100,7 +99,7 @@
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
                             <li>
-                                <a class="btn btn-sm btn-info box-shadow-3 round btn-min-width pull-right" style="width:20px;" href="#" target="_blank">{{ date('Y') }}</a>
+                                
                             </li>
                         </ul>
                     </div>
@@ -135,8 +134,7 @@
                     <h4 class="card-title">Number of Boys</h4>
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-warning box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
+            
                             </li>
                         </ul>
                     </div>
@@ -172,8 +170,7 @@
                     <h4 class="card-title">Number of Girls</h4>
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-success box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
+            
                             </li>
                         </ul>
                     </div>
@@ -243,8 +240,7 @@
                     <h4 class="card-title">Worst Performed Student(s)</h4>
                     <div class="heading-elements">
                         <ul class="list-inline d-block mb-0">
-                            <li>
-                                <a class="btn btn-sm btn-danger box-shadow-3 round btn-min-width pull-right" href="#" target="_blank">{{ date('Y') }}</a>
+        
                             </li>
                         </ul>
                     </div>
