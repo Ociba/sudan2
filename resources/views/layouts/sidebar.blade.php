@@ -22,7 +22,11 @@
             </li>
             --}}
             <li class="nav-item">
-              <a href="/get-students-performance"><i class="icon-book-open"></i><span class="menu-title">Performance</span>
+              <a href="#"><span class="menu-title text-blue">Performance</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href="/get-students-performance"><i class="icon-book-open"></i><span class="menu-title">Students</span>
             </a>
             </li>
             <li class="nav-item">
