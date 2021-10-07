@@ -85,11 +85,18 @@ class ResultsController extends Controller
         return view('students_performance', compact('results'));
     }
      /** 
-     * This function gets general Gender performance
+     * This function gets general Boys performance
     */
-    protected function getGenderPerformance(){
+    protected function getBoysPerformance(){
         $results = Result::get();
-        return view('gender_performance', compact('results'));
+        return view('boys_performance', compact('results'));
+    }
+     /** 
+     * This function gets general Girls performance
+    */
+    protected function getGirlsPerformance(){
+        $results = Result::get();
+        return view('girls_performance', compact('results'));
     }
      /** 
      * This function gets general States performance

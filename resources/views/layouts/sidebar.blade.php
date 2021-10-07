@@ -30,7 +30,11 @@
             </a>
             </li>
             <li class="nav-item">
-              <a href="/get-gender-performance"><i class="icon-users"></i><span class="menu-title">Gender</span>
+              <a href="/get-boys-performance"><i class="icon-user"></i><span class="menu-title">Boys</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a href="/get-girls-performance"><i class="icon-user-female"></i><span class="menu-title">Girls</span>
             </a>
             </li>
             <li class="nav-item">
