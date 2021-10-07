@@ -241,14 +241,13 @@
 <div class="row">
 <div class="col-md-12 col-lg-12 col-xl-12">
 <!-- Pie charts section start -->
-{{--
 <section id="chartjs-pie-charts">
     <div class="row">
         <!-- Simple Pie Chart -->
         <div class="col-md-6 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Regional Performance Summary</h4>
+                    <h4 class="card-title">Boys and Girls Performance</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -273,16 +272,7 @@
         <div class="col-md-6 col-sm-12">
         <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title ">Candidates Registered Per Region</h4>
-                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                    <div class="heading-elements">
-                        <ul class="list-inline mb-0">
-                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                            <li><a data-action="close"><i class="ft-x"></i></a></li>
-                        </ul>
-                    </div>
+                    <h4 class="card-title ">Best Performed Subject & Worst performed Subject</h4>
                 </div>
                 <div class="card-content collapse show">
                     <div class="card-body">
@@ -295,7 +285,6 @@
         </div>
     </div>    
 </section>
---}}
 <!-- // Pie charts section end -->
 <!-- Total earning & Recent Sales  -->
 </div>
