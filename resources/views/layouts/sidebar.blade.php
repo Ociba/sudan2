@@ -1,7 +1,7 @@
 <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true" data-img="{{ asset('admin/app-assets/images/backgrounds/02.jpg')}}">
       <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-          <li class="nav-item mr-auto"><a class="navbar-brand" href="#"><img class="brand-logo" alt="Chameleon admin logo" style="border-radius:50%; width: 50px; height:50px;" src="{{ asset('admin/app-assets/images/ico/logo.png')}}"/>
+          <li class="nav-item mr-auto"><a class="navbar-brand" href="#"><img class="brand-logo" alt="" style="border-radius:50%; width: 50px; height:50px;" src="{{ asset('admin/app-assets/images/ico/logo.png')}}"/>
               <h3 class="brand-text">SSNEC</h3></a></li>
           <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
         </ul>
