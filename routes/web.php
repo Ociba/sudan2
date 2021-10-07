@@ -37,7 +37,8 @@ Route::get('/get-results',[ResultsController::Class, 'getUploadedResults']);
 Route::get('/enter-results/{id}',[ResultsController::Class, 'createResults']);
 Route::get('/get-schools-performance',[ResultsController::Class, 'getSchoolPerformance'])->name('Schools Performance');
 Route::get('/get-students-performance',[ResultsController::Class, 'getStudentsPerformance'])->name('Students Performance');
-Route::get('/get-gender-performance',[ResultsController::Class, 'getGenderPerformance'])->name('Girls and Boys Performance');
+Route::get('/get-boys-performance',[ResultsController::Class, 'getBoysPerformance'])->name('Boys Performance');
+Route::get('/get-girls-performance',[ResultsController::Class, 'getGirlsPerformance'])->name('Girls Performance');
 Route::get('/get-states-performance',[ResultsController::Class, 'getStatesPerformance'])->name('States Performance');
 });
 
