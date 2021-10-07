@@ -63,10 +63,6 @@
                             <table class="table table-striped table-bordered file-export">
                                 <thead>
                                     <tr>
-                                        {{-- <th>Group</th>
-                                        <th>Sub Group</th>
-                                        <th>S/No.</th>
-                                        <th>Secrete Code</th> --}}
                                         <th>Index Number</th>
                                         <th>First Name</th>
                                         <th>Second Name</th>
@@ -93,6 +89,9 @@
                                         <th>General Science</th>
                                         <th>Principles of Accounts</th>
                                         <th>English Literature </th>
+                                        <th>Total </th>
+                                        <th>Percentage</th>
+                                        <th>Result</th>
                                         <th>Number of subjects registered</th>
                                         <th>Center Number</th>
                                         <th>School Name</th>
@@ -102,11 +101,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach($results as $i=>$result)
-                                    <tr>
-                                        {{-- <td>{{$result->group_name}}</td>
-                                        <td>{{$result->sub_group_name}}</td>
-                                        <td>{{$result->serial_number}}</td>
-                                        <td>{{$result->secrete_code}}</td> --}}
+                                    <tr>    
                                         <td>{{$result->index_number}}</td>
                                         <td>{{$result->first_name}}</td>
                                         <td>{{$result->second_name}}</td>
@@ -133,12 +128,14 @@
                                         <td>{{$result->general_science}}</td>
                                         <td>{{$result->principles_of_accounts}}</td>
                                         <td>{{$result->english_literatue}}</td>
+                                        <td>{{$result->total}}
+                                        <td>{{$results->percentage}}
+                                        <td>{{$result->result}}
                                         <td>{{$result->no_of_subjects}}</td>
                                         <td>{{$result->center_number}}</td>
                                         <td>{{$result->school_name}}</td>
                                         <td>{{$result->state}}</td>
                                         <td>
-                                            {{--<button type="button" class="btn btn-sm btn-info " data-toggle="modal" data-backdrop="false" data-target="#info_{{$result->id}}">Add Results</button>--}}
                                             <a href="/add-results/{{$result->id}}" button type="button" class="btn btn-sm btn-info ">Add Results</button></a>
                                         </td>
                                     </tr>

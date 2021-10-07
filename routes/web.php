@@ -23,6 +23,7 @@ Route::get('/register',function(){ return redirect('/login');});
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 //})->name('dashboard');
+Route::group(['middleware' => ['auth']], function () {
 Route::get('/dashboard',[HomeController::Class, 'getDashboard'])->name('dashboard');
 Route::get('/logout',[AuthenticationController::Class, 'logoutUser']);
 Route::get('/add-results/{id}', [ResultsController::Class, 'addResults'])->name('Enter Results');
@@ -34,4 +35,5 @@ Route::get('/delete-user',[UserController::Class, 'deleteUser']);
 Route::post('/import',[ResultsController::Class, 'import'])->name('import');
 Route::get('/get-results',[ResultsController::Class, 'getUploadedResults']);
 Route::get('/enter-results/{id}',[ResultsController::Class, 'createResults']);
+});
 
