@@ -74,35 +74,40 @@ class ResultsController extends Controller
      * This function gets general school performance
     */
     protected function getSchoolPerformance(){
-        $results = Result::get();
+        $results = Result::distinct('school_name')->get(['school_name','center_number','state']);
         return view('school_performance', compact('results'));
     }
      /** 
      * This function gets general students performance
     */
     protected function getStudentsPerformance(){
-        $results = Result::get();
+        $results = Result::orderBy('total','desc')->simplePaginate(10);
         return view('students_performance', compact('results'));
     }
      /** 
      * This function gets general Boys performance
     */
     protected function getBoysPerformance(){
-        $results = Result::get();
+        $results = Result::where('male_gender','M')->orderBy('total','desc')->paginate(10);
         return view('boys_performance', compact('results'));
     }
      /** 
      * This function gets general Girls performance
     */
     protected function getGirlsPerformance(){
-        $results = Result::get();
+        $results = Result::where('female_gender','F')->orderBy('total','desc')->paginate(10);
         return view('girls_performance', compact('results'));
     }
      /** 
      * This function gets general States performance
     */
     protected function getStatesPerformance(){
-        $results = Result::get();
+        $results = Result::get()->unique('state');
         return view('states_performance', compact('results'));
+    }
+
+    protected function searchByIndexNumber(){
+        $results= Result::where('index_number',request()->search)->paginate(10);
+        return view('results',compact('results'));
     }
 }

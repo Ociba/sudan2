@@ -52,9 +52,9 @@
                                 </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                         <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#default">Upload Results</button>
+                                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#default">Upload Results</button>
                                         <div class=" pull-right">
-                                        <form class="chat-app-input row">
+                                        <form class="chat-app-input row"  action="/search-by-index_number">
                                             <div class="col-12">
                                                 <div class="input-group position-relative has-icon-left">
                                                     <div class="form-control-position">

@@ -35,22 +35,22 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <h5 class="card-title text-bold-700 my-2 m-3">A table showing {{request()->route()->getName()}}</h5>
+                                <h5 class="card-title text-bold-700 my-2 m-3">A table showing {{request()->route()->getName()}} Results</h5>
+                                <div class="card-header">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                       
+                                    </div>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="card-content collapse show">
-                                    <div class="card-body pull-right">
-                                        <form class="chat-app-input row">
-                                            <div class="col-12">
-                                                <div class="input-group position-relative has-icon-left">
-                                                    <div class="form-control-position">
-                                                        <span id="basic-addon3"><i class="ft-image"></i></span>
-                                                    </div>
-                                                    <input type="text" placeholder="Search.." class="form-control round" name="search">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="submit">Search</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-striped">
@@ -58,40 +58,33 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>State</th>
+                                                    <th>Total Marks</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach($results as $i=>$result)
+                                                @php
+                                                    $total_state_marks = \DB::table('results')->where('state',$result->state)->sum('total');
+                                                @endphp
                                                 <tr>
-                                                    <td>{{$i + 1}}</td>
+                                                    <td>{{$i+1}}</td>
                                                     <td>{{$result->state}}</td>
+                                                    <td>{{number_format($total_state_marks)}}</td>
                                                 </tr>
                                                 @endforeach 
                                             </tbody>
                                         </table>
-                                        <div class="row m-2">
-                                        <div class="col-lg-6 col-md-12">
-                                            <nav class="mb-3" aria-label="Page navigation">
-                                                <ul class="pagination">
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true">Prev</span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                    <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span aria-hidden="true">Next</span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
+                                        <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="col-lg-4"></div>
+                                            <div class="col-lg-4">
+                                                <nav class="mb-3" aria-label="Page navigation">
+                                                    <ul class="pagination">
+                                                        {{-- {{$results->links()}} --}}
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="col-lg-4"></div>
                                         </div>
                                         </div>
                                     </div>
@@ -121,5 +114,6 @@
         <script src="{{ asset('admin/app-assets/js/core/app.min.js')}}" type="text/javascript"></script>
         <script src="{{ asset('admin/app-assets/js/scripts/customizer.min.js')}}" type="text/javascript"></script>
         <script src="{{ asset('admin/app-assets/vendors/js/jquery.sharrre.js')}}" type="text/javascript"></script>
+        <!-- Modal -->
     </body>
 </html>

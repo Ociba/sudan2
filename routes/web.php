@@ -40,5 +40,6 @@ Route::get('/get-students-performance',[ResultsController::Class, 'getStudentsPe
 Route::get('/get-boys-performance',[ResultsController::Class, 'getBoysPerformance'])->name('Boys Performance');
 Route::get('/get-girls-performance',[ResultsController::Class, 'getGirlsPerformance'])->name('Girls Performance');
 Route::get('/get-states-performance',[ResultsController::Class, 'getStatesPerformance'])->name('States Performance');
+Route::get('search-by-index_number',[ResultsController::Class, 'searchByIndexNumber']);
 });
 
