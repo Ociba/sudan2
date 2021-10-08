@@ -31,7 +31,7 @@ class ResultsController extends Controller
      * this function gets the results uploaded
      */
     protected function getUploadedResults(){
-        $results = Result::get();
+        $results = Result::Paginate(10);
         return view('results', compact('results'));
     }
     /** 
