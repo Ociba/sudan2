@@ -56,28 +56,23 @@ $(window).on("load", function(){
         },
         title: {
             display: true,
-            text: 'Grades'
+            text: 'Bar Chart Showing States Performance'
         }
     };
 
     // Chart Data
     var chartData = {
-        labels: ["2015", "2016", "2017", "2018", "2019", "2020"],
+        labels: ["Western Bahr el Ghazal", "Lakes", "Warrap", "Western Equatoria", "Central Equatoria", "Eastern Equatoria",
+                "Jonglei","Unity","Upper Nile","Northern Bahr el Ghazal","Abyei Administrative Area","Ruweng Administrative Area",
+                 "Pibor Administrative Area"],
         datasets: [{
-            label: "Passed",
-            data: [65, 85, 40, 81, 56, 75],
-            backgroundColor: "#28D094",
+            label: "State",
+            data: [65, 85, 44, 81, 56, 75, 90, 60, 75, 50, 95, 69, 84],
+            backgroundColor: ["#28D094","#FF4961","#1E9FF2","#009933","#ffff00","#ff0000", "#000066", "#660000", "#00001a", "#333399", "#cc3300", "#9900cc", "#00cc00"],
             hoverBackgroundColor: "rgba(40,208,148,.9)",
-            borderColor: "transparent"
-        }, {
-            label: "Failed",
-            data: [45, 65, 65, 19, 86, 35],
-            backgroundColor: "#FF4961",
-            hoverBackgroundColor: "rgba(255,73,97,.9)",
             borderColor: "transparent"
         }]
     };
-
     var config = {
         type: 'bar',
 
