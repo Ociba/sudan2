@@ -63,7 +63,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfSchools()}}</h1>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfSchools())}}</h1>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Students</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfStudents()}}</h1>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfStudents())}}</h1>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfBoys()}}</h1>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfBoys())}}</h1>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="media d-flex">
                             <div class="media-body text-white text-center align-self-top mt-0">
                                 <span class="d-block mb-1 font-medium-1">Total Number of Girls</span>
-                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfGirls()}}</h1>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfGirls())}}</h1>
                             </div>
                         </div>
                     </div>
