@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+ini_set('memory_limit', '64M');
+ini_set('max_execution_time', 300);
 
 use Illuminate\Http\Request;
 use App\Exports\ResultsExport;
