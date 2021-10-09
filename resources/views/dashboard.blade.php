@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="">
-    <!-- BEGIN: Head-->
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <title>South Sudan National Examination Council</title>
-        <link rel="apple-touch-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
-        <!-- BEGIN: Vendor CSS-->
-        @include('layouts.css')
-        <!-- END: Custom CSS-->
-    </head>
-    <!-- END: Head-->
-    <!-- BEGIN: Body-->
-    <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
-        <!-- BEGIN: Header-->
-        @include('layouts.navbar')
-        <!-- END: Header-->
-        <!-- BEGIN: Main Menu-->
-        @include('layouts.sidebar')
-        <!-- END: Main Menu-->
-        <!-- BEGIN: Content-->
-        <div class="app-content content">
-            <div class="content-wrapper">
-                <div class="content-wrapper-before"></div>
-                <div class="content-body">
-                    <!--/ Revenue, Hit Rate & Deals -->
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-12">
-                            <div class="card bg-gradient-x-purple-blue">
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div class="media d-flex">
-                                            <div class="media-body text-white text-center align-self-top mt-0">
-                                                <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
-                                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfSchools()}}</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+  <!-- BEGIN: Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>South Sudan National Examination Council</title>
+    <link rel="apple-touch-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/app-assets/images/ico/logo.png')}}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    
+    @include('layouts.css')
+    <!-- END: Custom CSS-->
+
+  </head>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+  <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+   @include('layouts.navbar')
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    @include('layouts.sidebar')
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-wrapper">
+        <div class="content-wrapper-before"></div>
+        <div class="content-body">
+<!--/ Revenue, Hit Rate & Deals -->
+<div class="row">
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-blue">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Schools</span>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfSchools())}}</h1>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-12">
-                            <div class="card bg-gradient-x-orange-yellow">
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div class="media d-flex">
-                                            <div class="media-body text-white text-center align-self-top mt-0">
-                                                <span class="d-block mb-1 font-medium-1">Total Number of Students</span>
-                                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfStudents()}}</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-orange-yellow">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Students</span>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfStudents())}}</h1>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-12">
-                            <div class="card bg-gradient-x-purple-red">
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div class="media d-flex">
-                                            <div class="media-body text-white text-center align-self-top mt-0">
-                                                <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
-                                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfBoys()}}</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-purple-red">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Boys</span>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfBoys())}}</h1>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-12">
-                            <div class="card bg-gradient-x-blue-green">
-                                <div class="card-content">
-                                    <div class="card-body">
-                                        <div class="media d-flex">
-                                            <div class="media-body text-white text-center align-self-top mt-0">
-                                                <span class="d-block mb-1 font-medium-1">Total Number of Girls</span>
-                                                <h1 class="text-white text-center mb-0">{{ auth()->user()->countNumberOfGirls()}}</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-12">
+            <div class="card bg-gradient-x-blue-green">
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="media d-flex">
+                            <div class="media-body text-white text-center align-self-top mt-0">
+                                <span class="d-block mb-1 font-medium-1">Total Number of Girls</span>
+                                <h1 class="text-white text-center mb-0">{{ number_format(auth()->user()->countNumberOfGirls())}}</h1>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-12">
