@@ -337,9 +337,24 @@
      @include('layouts.javascript')
      <script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/bar/column.js')}}" type="text/javascript"></script>
      <script src="{{ asset('admin/app-assets/vendors/js/charts/chart.min.js')}}" type="text/javascript"></script>
-     <script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/pie-doughnut/pie-simple.min.js')}}" type="text/javascript"></script>
+    {{--<script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/pie-doughnut/pie-simple.min.js')}}" type="text/javascript"></script>--}}
      <script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/pie-doughnut/doughnut-simple.min.js')}}" type="text/javascript"></script>
-     <script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/pie-doughnut/pie-simple2.min.js')}}" type="text/javascript"></script>
+     {{--<script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/pie-doughnut/pie-simple2.min.js')}}" type="text/javascript"></script>--}}
      <script src="{{ asset('admin/app-assets/js/scripts/charts/chartjs/line/line.min.js')}}" type="text/javascript"></script>
+     <script>
+     $(window).on("load",function(){var a=$("#simple-pie-chart");
+        new Chart(a,{type:"pie",options:{responsive:!0,maintainAspectRatio:!1,responsiveAnimationDuration:500},
+        data:{labels:["Girls","Boys"],
+        datasets:[{label:"My First dataset",data:[60,90],
+        backgroundColor:["#666EE8","#ff0000","#FF4961","#1E9FF2","#FF9149"]
+        }]}})});
+     </script>
+     <script>
+     $(window).on("load",function(){var a=$("#simple-pie-chart2");
+      new Chart(a,{type:"pie",options:{responsive:!0,maintainAspectRatio:!1,responsiveAnimationDuration:500},
+      data:{labels:["Best Performed Subject","Worst Performed Subject"],
+      datasets:[{label:"My First dataset",data:[85,34],
+      backgroundColor:["#ffff00","#009933"]}]}})});
+     </script>
   </body>
 </html>
